@@ -1,0 +1,2 @@
+class MazeController:
+    pass
