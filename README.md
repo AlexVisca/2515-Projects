@@ -1,2 +1,2 @@
-# a_maze_game
-A maze game using the MVC template
+# 2515 Repository
+A repo of all 2515 projects
