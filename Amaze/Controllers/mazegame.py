@@ -45,44 +45,44 @@ class Maze:
                by = by + 1
 
 
-class App:
+#class App:
  
-    windowWidth = 800
-    windowHeight = 600
-    player = 0
+#    windowWidth = 800
+#    windowHeight = 600
+ #   player = 0
  
-    def __init__(self):
-        self._running = True
-        self._display_surf = None
-        self._image_surf = None
-        self._block_surf = None
-        self.player = Player()
-        self.maze = Maze()
+  #  def __init__(self):
+  #      self._running = True
+ #       self._display_surf = None
+#        self._image_surf = None
+#        self._block_surf = None
+#        self.player = Player()
+#        self.maze = Maze()
  
-    def on_init(self):
-        pygame.init()
-        self._display_surf = pygame.display.set_mode((self.windowWidth,self.windowHeight), pygame.HWSURFACE)
-        
-        pygame.display.set_caption('maze game')
-        self._running = True
-        self._image_surf = pygame.image.load("pygame.png").convert()
-        self._block_surf = pygame.image.load("pygame.png").convert()
+#    def on_init(self):
+#        pygame.init()
+#        self._display_surf = pygame.display.set_mode((self.windowWidth,self.windowHeight), pygame.HWSURFACE)
+#        
+#        pygame.display.set_caption('maze game')
+#        self._running = True
+#        self._image_surf = pygame.image.load("pygame.png").convert()
+#        self._block_surf = pygame.image.load("pygame.png").convert()
  
-    def on_event(self, event):
-        if event.type == QUIT:
-            self._running = False
+#    def on_event(self, event):
+#        if event.type == QUIT:
+#            self._running = False
  
-    def on_loop(self):
-        pass
+#    def on_loop(self):
+#        pass
     
-    def on_render(self):
-        self._display_surf.fill((0,0,0))
-        self._display_surf.blit(self._image_surf,(self.player.x,self.player.y))
-        self.maze.draw(self._display_surf, self._block_surf)
-        pygame.display.flip()
+#    def on_render(self):
+#        self._display_surf.fill((0,0,0))
+#        self._display_surf.blit(self._image_surf,(self.player.x,self.player.y))
+#        self.maze.draw(self._display_surf, self._block_surf)
+#        pygame.display.flip()
  
-    def on_cleanup(self):
-        pygame.quit()
+#    def on_cleanup(self):
+#        pygame.quit()
  
   #  def on_execute(self):
   #      if self.on_init() == False:
