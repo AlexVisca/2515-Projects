@@ -5,7 +5,7 @@ class MazeController:
 if __name__ == '__main__':
     running = True
     while running:
-        if input not in ['a', 's', 'w', 'd']:
+        if input not in ['a', 's', 'w', 'd', 'q']:
             print("Use WASD to move player.")
         elif input == 'a':
             pass
