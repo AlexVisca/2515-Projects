@@ -1,3 +1,8 @@
+from player import Player
+from pygame.locals import *
+import pygame
+from maze import Maze
+
 class MazeController:
     pass
 
