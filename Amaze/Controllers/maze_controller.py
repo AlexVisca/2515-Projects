@@ -3,7 +3,7 @@ from pygame.locals import *
 import pygame
 from mazegame import Maze
 from mazegame import Player
-from mazegame import App
+
 
 class MazeController:
     windowWidth = 800
