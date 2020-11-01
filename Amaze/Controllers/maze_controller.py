@@ -1,27 +1,48 @@
-from player import Player
+#from player import Player
 from pygame.locals import *
 import pygame
-from maze import Maze
+from mazegame import Maze
+from mazegame import Player
+from mazegame import App
 
 class MazeController:
-    pass
-
-
+    def __init__(self):
+        self.Maze = Maze()
+        self.Player = Player()
+        self.App = App()
+    
+    def on_execute(self):
+        if self.App.on_init() == False:
+            self.App._running = False
+ 
+        while( self.App._running ):
+            
+            pygame.event.pump()
+            keys = pygame.key.get_pressed()
+            
+            if (keys[ord('a')]):
+                self.Player.moveRight()
+ 
+            if (keys[ord('d')]):
+                self.Player.moveLeft()
+ 
+            if (keys[ord('w')]):
+                self.Player.moveUp()
+ 
+            if (keys[ord('s')]):
+                self.Player.moveDown()
+ 
+            if (keys[K_ESCAPE]):
+                self.App._running = False
+ 
+            self.App.on_loop()
+            self.App.on_render()
+        self.App.on_cleanup()
+  
 if __name__ == '__main__':
-    running = True
-    while running:
-        if input not in ['a', 's', 'w', 'd']:
-            print("Use WASD to move player.")
-        elif input == 'a':
-            pass
-        elif input == 's':
-            pass
-        elif input == 'w':
-            pass
-        elif input == 'd':
-            pass
-        elif input == 'q':
-            raise SystemExit
+    theApp = MazeController()
+    theApp.on_execute()
+  
 
 
 
