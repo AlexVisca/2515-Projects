@@ -6,14 +6,14 @@ class Player:
     y = 44
     speed = 1
 
-    def move_right(self):
-        self.x = self.x + self.speed
-
-    def move_left(self):
+    def moveRight(self):
         self.x = self.x - self.speed
 
-    def move_up(self):
+    def moveLeft(self):
+        self.x = self.x + self.speed
+
+    def moveUp(self):
         self.y = self.y - self.speed
 
-    def move_down(self):
+    def moveDown(self):
         self.y = self.y + self.speed
